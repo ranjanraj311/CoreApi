@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace CoreApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class CurrencyRateController : ControllerBase
     {
         [HttpGet]
