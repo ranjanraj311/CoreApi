@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 namespace CoreApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    //[Route("[controller]")]
     public class CurrencyRateController : ControllerBase
     {
         [HttpGet]
+        [Route("CurrencyRate/GetCurrencyDetails")]
         public async Task<List<CurrencyRate>> GetCurrencyDetails()
         {
             CurrencyRate objEURO = new CurrencyRate()
@@ -89,6 +90,13 @@ namespace CoreApi.Controllers
             list.Add(objSZL);
 
             return list;
+        }
+
+        [HttpGet]
+        [Route("CurrencyRate/WelcomeMessage")]
+        public string WelcomeMessage()
+        {
+            return "Welcome Ranjan!!!";
         }
     }
 }
